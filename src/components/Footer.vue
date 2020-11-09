@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-autocare-blue px-5 py-5">
-    <div class="flex flex-wrap text-white sm:px-8 sm:py-8">
+    <div class="flex flex-wrap text-white sm:px-8 sm:py-8 lg:px-16">
       <div class="w-1/3 sm:w-1/4 mt-6 px-2">
         <h3 class="text-sm">Company</h3>
         <div class="text-xs font-hairline mt-3">
