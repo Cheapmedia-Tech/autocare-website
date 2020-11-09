@@ -11,7 +11,7 @@
         />
         <img
           src="../assets/img/logowithtext.svg"
-          alt=""
+          alt="logo with text"
           class="h-8 hidden lg:block"
         />
 
