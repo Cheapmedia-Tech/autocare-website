@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="bg-gray-500 h-32 sm:h-48 lg:h-60 shadow-lg rounded-lg mt-10"></div>
+    <div class="bg-gray-500 h-32 sm:h-48 lg:h-60 xl:h-70 shadow-lg rounded-lg mt-10"></div>
 
     <div class="mt-10 xl:text-lg text-autocare-blue font-thin sm:px-24 font-graphik">
       <p>

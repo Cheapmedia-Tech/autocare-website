@@ -59,7 +59,7 @@
             class="text-right mt-5 sm:flex sm:text-left sm:mt-0 sm:font-hairline sm:justify-center lg:justify-between"
           >
             <a
-              href="../pages/learn.html"
+              href="#"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base"
               >Learn</a
             >
