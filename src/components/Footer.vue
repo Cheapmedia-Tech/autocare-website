@@ -31,7 +31,7 @@
         <div class="text-xs font-hairline mt-3">
           <a class="block h-8 leading-tight">support@myautocare.ng</a>
           <a class="block h-8 leading-tight">+ 234 800 000 0000</a>
-          <div class="flex justify-between w-4/5 sm:w-3/5">
+          <div class="flex justify-between w-4/5 sm:w-4/5">
             <a href="#"
               ><img src="../assets/img/facebook.svg" alt="facebook" class="h-4"
             /></a>
