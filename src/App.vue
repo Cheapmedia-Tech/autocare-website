@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg-autocare-bg">
     <Header />
-    <Home />
+    <About />
     <Footer />
   </div>
 </template>
@@ -9,8 +9,8 @@
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import Home from "./components/Home.vue";
-// import About from "./components/About.vue";
+// import Home from "./components/Home.vue";
+import About from "./components/About.vue";
 // import Contacts from "./components/Contacts.vue";
 // import Learn from "./components/Learn.vue";
 // import SingleLearn from "./components/SingleLearn.vue";
@@ -20,8 +20,8 @@ export default {
   components: {
     Header,
     Footer,
-    Home,
-    // About,
+    // Home,
+    About,
     // Contacts,
     // Learn,
     // SingleLearn,
