@@ -20,10 +20,21 @@ module.exports = {
         "70": "23rem",
       },
       maxWidth: {
-        "xxs": "15rem",
+        xxs: "15rem",
       },
       right: {
         "1/2": "50%",
+      },
+      fontFamily: {
+        segoe: ["Segoe UI Regular", "sans-serif"],
+        "segoe-light": ["Segoe UI Light", "sans-serif"],
+        "segoe-italic": ["Segoe UI Italic", "sans-serif"],
+        "segoe-bold": ["Segoe UI Bold", "sans-serif"],
+        "segoe-bolditalic": ["Segoe UI Bold Italic", "sans-serif"],
+
+        graphik: ["Graphik", "sans-serif"],
+        "graphic-super": ["Graphik Super", "sans-serif"],
+
       },
     },
   },

@@ -4,8 +4,16 @@
       class="bg-autocare-blue px-6 py-4 sm:flex sm:justify-between sm:items-center lg:px-10"
     >
       <div class="flex justify-between items-center sm:w-2/12">
-        <img src="../assets/img/logo.svg" alt="logo" class="lg:hidden block h-8 w-auto">
-        <img src="../assets/img/logowithtext.svg" alt="" class="h-8 hidden lg:block">
+        <img
+          src="../assets/img/logo.svg"
+          alt="logo"
+          class="lg:hidden block h-8 w-auto"
+        />
+        <img
+          src="../assets/img/logowithtext.svg"
+          alt=""
+          class="h-8 hidden lg:block"
+        />
 
         <button
           class="focus:outline-none sm:hidden"
@@ -31,7 +39,7 @@
       >
         <div class="sm:w-8/12 lg:w-3/6 lg:mx-auto">
           <button
-            class="flex justify-end w-full sm:hidden"
+            class="flex justify-end w-full sm:hidden focus:outline-none"
             @click="isopen = false"
           >
             <svg
@@ -52,27 +60,27 @@
           >
             <a
               href="../pages/learn.html"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-white sm:py-1 sm:text-white sm:text-xs"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs"
               >Learn</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-white sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
               >Find a Mechanic</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-white sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
               >Services</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-white sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
               >About</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-white sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
               >Contact</a
             >
           </div>
@@ -81,12 +89,12 @@
           class="flex justify-between items-center sm:w-4/12 sm:justify-around lg:justify-between lg:w-1/5"
         >
           <button
-            class="px-6 py-1 h-10 border-2 border-autocare-blue rounded-md leading-none sm:text-xs sm:px-4 sm:py-1 sm:h-6 focus:outline-none hover:bg-autocare-orange hover:border-transparent hover:text-black sm:border-white sm:text-white sm:border"
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs sm:px-4 sm:py-1 sm:h-6 focus:outline-none hover:bg-autocare-orange hover:border-transparent hover:text-black sm:border-white sm:text-white sm:border"
           >
             Login
           </button>
           <button
-            class="px-6 py-1 h-10 rounded-md bg-autocare-orange leading-none sm:text-xs sm:px-4 sm:py-1 sm:h-6 focus:outline-none"
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs sm:px-4 sm:py-1 sm:h-6 focus:outline-none"
           >
             Sign up
           </button>

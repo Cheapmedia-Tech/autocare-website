@@ -7,19 +7,19 @@
 
       <div class="sm:w-5/12 sm:ml-6">
         <div class="sm:w-11/12">
-          <p class="text-gray-700 text-xs mt-2 font-hairline sm:mt-0">
-            <span class="font-semibold uppercase tracking-wide"
+          <p class="text-gray-700 font-segoe-light text-xs mt-2 sm:mt-0">
+            <span class="font-segoe uppercase tracking-wide"
               >Motor care </span
             >&bull; Oct. 25th, 2020
           </p>
 
           <h3
-            class="text-lg font-semibold leading-tight mt-4 sm:mt-3 text-autocare-blue"
+            class="text-lg font-semibold leading-tight mt-4 sm:mt-3 text-autocare-blue font-graphik"
           >
             Ten common faults associated with Toyota Cars and what to do
           </h3>
 
-          <p class="mt-5 sm:mt-3 text-xs font-hairline">
+          <p class="mt-5 sm:mt-3 text-xs font-segoe">
             Toyota Company has managed to stay relevant in the vehicle industry
             over the decades and they are renowned to have produced some of the
             best cars the world has ever known.
@@ -27,7 +27,7 @@
 
           <a
             href="learn.html"
-            class="block mt-3 text-xs uppercase font-medium tracking-wide text-autocare-blue"
+            class="block mt-3 text-xs uppercase font-segoe tracking-wide text-autocare-blue"
             >read more
             <span>
               <img src="../assets/img/arrow.svg" alt="arrow" class="inline" />
@@ -42,19 +42,19 @@
         <div class="sm:w-11/12">
           <div class="w-full bg-gray-500 h-40 rounded-lg shadow-lg"></div>
 
-          <p class="text-gray-700 text-xs mt-2 font-hairline">
-            <span class="font-semibold uppercase tracking-wide"
+          <p class="text-gray-700 font-segoe-light text-xs mt-2">
+            <span class="font-segoe uppercase tracking-wide"
               >Motor care </span
             >&bull; Oct. 25th, 2020
           </p>
 
           <h3
-            class="text-lg font-semibold leading-tight mt-4 text-autocare-blue"
+            class="text-lg font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
           >
             Ten common faults associated with Toyota Cars and what to do
           </h3>
 
-          <p class="mt-5 sm:mt-3 text-xs font-hairline">
+          <p class="mt-5 sm:mt-3 text-xs font-segoe">
             Toyota Company has managed to stay relevant in the vehicle industry
             over the decades and they are renowned to have produced some of the
             best cars the world has ever known.
@@ -62,7 +62,7 @@
 
           <a
             href="learn.html"
-            class="block mt-3 text-xs uppercase font-medium tracking-wide text-autocare-blue"
+            class="block mt-3 text-xs uppercase font-segoe tracking-wide text-autocare-blue"
             >read more
             <span>
               <img src="../assets/img/arrow.svg" alt="arrow" class="inline" />
@@ -75,19 +75,19 @@
         <div class="sm:w-11/12">
           <div class="w-full bg-gray-500 h-40 rounded-lg shadow-lg"></div>
 
-          <p class="text-gray-700 text-xs mt-2 font-hairline">
-            <span class="font-semibold uppercase tracking-wide"
+          <p class="text-gray-700 font-segoe-light text-xs mt-2">
+            <span class="font-segoe uppercase tracking-wide"
               >Motor care </span
             >&bull; Oct. 25th, 2020
           </p>
 
           <h3
-            class="text-lg font-semibold leading-tight mt-4 text-autocare-blue"
+            class="text-lg font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
           >
             Ten common faults associated with Toyota Cars and what to do
           </h3>
 
-          <p class="mt-5 sm:mt-3 text-xs font-hairline">
+          <p class="mt-5 sm:mt-3 text-xs font-segoe">
             Toyota Company has managed to stay relevant in the vehicle industry
             over the decades and they are renowned to have produced some of the
             best cars the world has ever known.
@@ -95,7 +95,7 @@
 
           <a
             href="learn.html"
-            class="block mt-3 text-xs uppercase font-medium tracking-wide text-autocare-blue"
+            class="block mt-3 text-xs uppercase font-segoe tracking-wide text-autocare-blue"
             >read more
             <span>
               <img src="../assets/img/arrow.svg" alt="arrow" class="inline" />
