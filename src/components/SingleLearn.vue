@@ -1,8 +1,8 @@
 <template>
-  <div class="px-10 py-16 sm:px-24 max-w-4xl mx-auto">
+  <div class="px-10 py-16 sm:px-24 max-w-4xl xl:max-w-2exl xl:py-24 xl:px-40 mx-auto">
     <div class="sm:px-24">
       <h1
-        class="text-2xl font-bold leading-tight w-11/12 text-autocare-blue font-graphik"
+        class="text-2xl xl:text-4xl font-bold leading-tight w-11/12 text-autocare-blue font-graphik"
       >
         Five Simple Car Faults You Can Fix Yourself
       </h1>
@@ -18,9 +18,9 @@
       </div>
     </div>
 
-    <div class="bg-gray-500 h-32 sm:h-48 shadow-lg rounded-lg mt-10"></div>
+    <div class="bg-gray-500 h-32 sm:h-48 lg:h-60 shadow-lg rounded-lg mt-10"></div>
 
-    <div class="mt-10 text-autocare-blue font-thin sm:px-24 font-graphik">
+    <div class="mt-10 xl:text-lg text-autocare-blue font-thin sm:px-24 font-graphik">
       <p>
         Have you ever been in a rush and the car suddenly developed a fault and
         wouldn’t start? Not to worry, these are every day car faults and should
@@ -65,15 +65,15 @@
     </div>
 
     <div class="mt-20 sm:mt-32">
-      <div class="bg-white rounded-lg shadow-xl px-4 py-8 sm:px-12 sm:py-10">
+      <div class="bg-white rounded-lg shadow-xl px-4 py-8 sm:px-12 sm:py-10 lg:px-20 lg:py-20 xl:px-24">
         <div class="px-8 sm:px-12">
           <h1
-            class="text-sm leading-tight font-medium text-autocare-blue font-graphik"
+            class="text-sm lg:text-lg xl:text-2xl leading-tight font-medium text-autocare-blue font-graphik"
           >
             Join our email list and get notified about new content
           </h1>
           <p
-            class="text-xs leading-tight mt-2 sm:mt-4 text-gray-600 font-segoe"
+            class="text-xs lg:text-base xl:text-xl leading-tight mt-2 sm:mt-4 lg:mt-8 text-gray-600 font-segoe"
           >
             Be the first to receive our latest content with the ability to
             opt-out at anytime. We promise to not spam your inbox or share your
@@ -81,16 +81,16 @@
           </p>
         </div>
         <div class="sm:px-20">
-          <div class="relative mt-5 font-graphik">
+          <div class="relative mt-5 lg:mt-12 font-graphik">
             <input
               type="text"
               name=""
               id=""
-              class="w-full rounded-full bg-gray-200 text-xs px-4 py-1 font-thin"
+              class="w-full rounded-full bg-gray-200 text-xs lg:text-base px-4 py-3 font-thin focus:outline-none"
               placeholder="Enter your Email"
             />
             <button
-              class="text-xs border border-autocare-blue rounded-full px-4 absolute right-0 mt-1 mr-2"
+              class="text-xs lg:text-base border border-autocare-blue rounded-full px-4 py-1 absolute right-0 mt-2 mr-2 hover:bg-autocare-blue hover:text-white hover:border-white"
             >
               Subscribe
             </button>
@@ -111,14 +111,14 @@
         <div class="sm:flex">
           <div class="mt-10 sm:w-7/12">
             <div class="sm:w-11/12">
-              <div class="w-full bg-gray-500 h-40 rounded-lg shadow-lg"></div>
+              <div class="w-full bg-gray-500 h-40 lg:h-56 rounded-lg shadow-lg"></div>
               <h3
-                class="text-lg font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
+                class="text-lg lg:text-xl font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
               >
                 Ten common faults associated with Toyota Cars and what to do
               </h3>
 
-              <p class="mt-3 sm:mt-3 text-xs font-segoe">
+              <p class="mt-3 sm:mt-3 lg:mt-6 text-xs lg:text-base font-segoe">
                 Toyota Company has managed to stay relevant in the vehicle
                 industry over the decades...
               </p>
@@ -127,14 +127,14 @@
 
           <div class="mt-10 sm:w-5/12">
             <div class="sm:w-11/12">
-              <div class="w-full bg-gray-500 h-40 rounded-lg shadow-lg"></div>
+              <div class="w-full bg-gray-500 h-40 lg:h-56 rounded-lg shadow-lg"></div>
               <h3
-                class="text-lg font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
+                class="text-lg lg:text-xl font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
               >
                 How to wash your car to keep the body from fading
               </h3>
 
-              <p class="mt-3 sm:mt-3 text-xs font-segoe">
+              <p class="mt-3 sm:mt-3 lg:mt-6 text-xs lg:text-base font-segoe">
                 It is quite painful to have successfully purchased your dream
                 car and then
               </p>
