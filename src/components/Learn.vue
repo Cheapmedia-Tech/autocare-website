@@ -1,12 +1,108 @@
 <template>
-  <div class="px-10 py-16">
-    <div>
-      <div class="w-full bg-gray-500 h-32 rounded-lg shadow-lg"></div>
-      <p class="text-gray-700 text-xs mt-2 font-hairline">
-        <span class="font-semibold uppercase">Motor care </span>&bull; Oct.
-        25th, 2020
-      </p>
-      <h3 class="text-sm font-semibold">Ten common faults associated with Toyota Cars and what to do</h3>
+  <div class="px-10 py-16 sm:px-16 max-w-4xl mx-auto">
+    <div class="sm:flex">
+      <div
+        class="w-full bg-gray-500 h-40 sm:h-56 rounded-lg shadow-lg sm:w-7/12"
+      ></div>
+
+      <div class="sm:w-5/12 sm:ml-6">
+        <div class="sm:w-11/12">
+          <p class="text-gray-700 text-xs mt-2 font-hairline sm:mt-0">
+            <span class="font-semibold uppercase tracking-wide"
+              >Motor care </span
+            >&bull; Oct. 25th, 2020
+          </p>
+
+          <h3
+            class="text-lg font-semibold leading-tight mt-4 sm:mt-3 text-autocare-blue"
+          >
+            Ten common faults associated with Toyota Cars and what to do
+          </h3>
+
+          <p class="mt-5 sm:mt-3 text-xs font-hairline">
+            Toyota Company has managed to stay relevant in the vehicle industry
+            over the decades and they are renowned to have produced some of the
+            best cars the world has ever known.
+          </p>
+
+          <a
+            href="learn.html"
+            class="block mt-3 text-xs uppercase font-medium tracking-wide text-autocare-blue"
+            >read more
+            <span>
+              <img src="../assets/img/arrow.svg" alt="arrow" class="inline" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:flex sm:justify-between">
+      <div class="mt-16 sm:w-6/12">
+        <div class="sm:w-11/12">
+          <div class="w-full bg-gray-500 h-40 rounded-lg shadow-lg"></div>
+
+          <p class="text-gray-700 text-xs mt-2 font-hairline">
+            <span class="font-semibold uppercase tracking-wide"
+              >Motor care </span
+            >&bull; Oct. 25th, 2020
+          </p>
+
+          <h3
+            class="text-lg font-semibold leading-tight mt-4 text-autocare-blue"
+          >
+            Ten common faults associated with Toyota Cars and what to do
+          </h3>
+
+          <p class="mt-5 sm:mt-3 text-xs font-hairline">
+            Toyota Company has managed to stay relevant in the vehicle industry
+            over the decades and they are renowned to have produced some of the
+            best cars the world has ever known.
+          </p>
+
+          <a
+            href="learn.html"
+            class="block mt-3 text-xs uppercase font-medium tracking-wide text-autocare-blue"
+            >read more
+            <span>
+              <img src="../assets/img/arrow.svg" alt="arrow" class="inline" />
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-16 sm:w-6/12">
+        <div class="sm:w-11/12">
+          <div class="w-full bg-gray-500 h-40 rounded-lg shadow-lg"></div>
+
+          <p class="text-gray-700 text-xs mt-2 font-hairline">
+            <span class="font-semibold uppercase tracking-wide"
+              >Motor care </span
+            >&bull; Oct. 25th, 2020
+          </p>
+
+          <h3
+            class="text-lg font-semibold leading-tight mt-4 text-autocare-blue"
+          >
+            Ten common faults associated with Toyota Cars and what to do
+          </h3>
+
+          <p class="mt-5 sm:mt-3 text-xs font-hairline">
+            Toyota Company has managed to stay relevant in the vehicle industry
+            over the decades and they are renowned to have produced some of the
+            best cars the world has ever known.
+          </p>
+
+          <a
+            href="learn.html"
+            class="block mt-3 text-xs uppercase font-medium tracking-wide text-autocare-blue"
+            >read more
+            <span>
+              <img src="../assets/img/arrow.svg" alt="arrow" class="inline" />
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
