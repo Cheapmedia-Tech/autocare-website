@@ -1,5 +1,7 @@
 <template>
-  <div class="px-10 py-16 sm:px-24 max-w-4xl sm:max-w-6xl xl:max-w-2exl xl:py-24 xl:px-40 mx-auto">
+  <div
+    class="px-10 py-16 sm:px-24 max-w-4xl sm:max-w-6xl xl:max-w-2exl xl:py-24 xl:px-40 mx-auto"
+  >
     <div class="sm:px-24">
       <h1
         class="text-2xl xl:text-4xl font-bold leading-tight w-11/12 text-autocare-blue font-graphik"
@@ -18,9 +20,13 @@
       </div>
     </div>
 
-    <div class="bg-gray-500 h-32 sm:h-48 lg:h-60 xl:h-70 shadow-lg rounded-lg mt-10"></div>
+    <div
+      class="bg-gray-500 h-32 sm:h-48 lg:h-60 xl:h-70 shadow-lg rounded-lg mt-10"
+    ></div>
 
-    <div class="mt-10 xl:text-lg text-autocare-blue font-thin sm:px-24 font-graphik">
+    <div
+      class="mt-10 xl:text-lg text-autocare-blue font-light sm:px-24 font-graphik"
+    >
       <p>
         Have you ever been in a rush and the car suddenly developed a fault and
         wouldn’t start? Not to worry, these are every day car faults and should
@@ -65,7 +71,9 @@
     </div>
 
     <div class="mt-20 sm:mt-32">
-      <div class="bg-white rounded-lg shadow-xl px-4 py-8 sm:px-12 sm:py-10 lg:px-20 lg:py-20 xl:px-24">
+      <div
+        class="bg-white rounded-lg shadow-xl px-4 py-8 sm:px-12 sm:py-10 lg:px-20 lg:py-20 xl:px-24"
+      >
         <div class="px-8 sm:px-12">
           <h1
             class="text-sm lg:text-lg xl:text-2xl leading-tight font-medium text-autocare-blue font-graphik"
@@ -111,7 +119,9 @@
         <div class="sm:flex">
           <div class="mt-10 sm:w-7/12">
             <div class="sm:w-11/12">
-              <div class="w-full bg-gray-500 h-40 lg:h-56 rounded-lg shadow-lg"></div>
+              <div
+                class="w-full bg-gray-500 h-40 lg:h-56 rounded-lg shadow-lg"
+              ></div>
               <h3
                 class="text-lg lg:text-xl font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
               >
@@ -127,7 +137,9 @@
 
           <div class="mt-10 sm:w-5/12">
             <div class="sm:w-11/12">
-              <div class="w-full bg-gray-500 h-40 lg:h-56 rounded-lg shadow-lg"></div>
+              <div
+                class="w-full bg-gray-500 h-40 lg:h-56 rounded-lg shadow-lg"
+              ></div>
               <h3
                 class="text-lg lg:text-xl font-semibold leading-tight mt-4 text-autocare-blue font-graphik"
               >
