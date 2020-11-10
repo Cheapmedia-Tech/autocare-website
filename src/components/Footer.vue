@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-autocare-blue px-5 py-5">
-    <div class="flex flex-wrap text-white sm:px-8 sm:py-8 lg:px-16">
+  <footer class="bg-autocare-blue px-5 py-5 xl:px-10">
+    <div class="flex flex-wrap text-white sm:px-8 sm:py-8 lg:px-16 xl:px-32">
       <div class="w-1/3 sm:w-1/4 mt-6 px-2">
         <h3 class="text-sm font-segoe">Company</h3>
         <div class="text-xs font-segoe-light mt-3">
@@ -31,7 +31,7 @@
         <div class="text-xs font-segoe-light mt-3">
           <a class="block h-8 leading-tight">support@myautocare.ng</a>
           <a class="block h-8 leading-tight">+ 234 800 000 0000</a>
-          <div class="flex justify-between w-4/5 sm:w-4/5">
+          <div class="flex justify-between w-4/5 lg:w-3/4 xl:w-2/4">
             <a href="#"
               ><img src="../assets/img/facebook.svg" alt="facebook" class="h-4"
             /></a>

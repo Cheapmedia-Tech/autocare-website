@@ -18,9 +18,20 @@ module.exports = {
       maxHeight: {
         "60": "20rem",
         "70": "23rem",
+        "80": "24rem",
+        "90": "26rem",
+        "100": "28rem",
+      },
+      minHeight: {
+        hscreen: "55vh",
       },
       maxWidth: {
         xxs: "15rem",
+        xxll: "40rem",
+        exl: "50rem",
+        "2exl": "82rem",
+
+        xxl: "1440px",
       },
       right: {
         "1/2": "50%",
@@ -34,7 +45,6 @@ module.exports = {
 
         graphik: ["Graphik", "sans-serif"],
         "graphic-super": ["Graphik Super", "sans-serif"],
-
       },
     },
   },

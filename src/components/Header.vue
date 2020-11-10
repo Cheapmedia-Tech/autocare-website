@@ -3,7 +3,7 @@
     <nav
       class="bg-autocare-blue px-6 py-4 sm:flex sm:justify-between sm:items-center lg:px-10"
     >
-      <div class="flex justify-between items-center sm:w-2/12">
+      <div class="flex justify-between items-center sm:w-3/12">
         <img
           src="../assets/img/logo.svg"
           alt="logo"
@@ -11,7 +11,7 @@
         />
         <img
           src="../assets/img/logowithtext.svg"
-          alt=""
+          alt="logo with text"
           class="h-8 hidden lg:block"
         />
 
@@ -34,7 +34,7 @@
       </div>
 
       <div
-        class="py-4 px-4 w-4/6 h-10/12 flex flex-col justify-between bg-white absolute top-0 right-0 sm:relative sm:bg-transparent sm:flex sm:flex-row sm:w-full sm:py-2 z-30"
+        class="py-4 px-4 w-4/6 h-10/12 sm:w-full flex flex-col justify-between bg-white absolute top-0 right-0 sm:relative sm:bg-transparent sm:flex sm:flex-row sm:py-2 z-30"
         :class="{ hidden: !isopen, block: isopen }"
       >
         <div class="sm:w-8/12 lg:w-3/6 lg:mx-auto">
@@ -59,42 +59,42 @@
             class="text-right mt-5 sm:flex sm:text-left sm:mt-0 sm:font-hairline sm:justify-center lg:justify-between"
           >
             <a
-              href="../pages/learn.html"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs"
+              href="#"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base"
               >Learn</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Find a Mechanic</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Services</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >About</a
             >
             <a
               href="#"
-              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs sm:ml-4"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Contact</a
             >
           </div>
         </div>
         <div
-          class="flex justify-between items-center sm:w-4/12 sm:justify-around lg:justify-between lg:w-1/5"
+          class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between"
         >
           <button
-            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs sm:px-4 sm:py-1 sm:h-6 focus:outline-none hover:bg-autocare-orange hover:border-transparent hover:text-black sm:border-white sm:text-white sm:border"
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none hover:bg-autocare-orange hover:border-transparent hover:text-black sm:border-white sm:text-white sm:border"
           >
             Login
           </button>
           <button
-            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs sm:px-4 sm:py-1 sm:h-6 focus:outline-none"
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none"
           >
             Sign up
           </button>

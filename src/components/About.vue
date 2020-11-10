@@ -3,7 +3,7 @@
     <div class="w-full">
       <div class="relative">
         <h1
-          class="absolute text-base sm:text-4xl font-semibold font-graphik text-white z-20 w-full text-center bottom-0 mb-6 sm:mb-12"
+          class="absolute text-base sm:text-4xl font-semibold font-graphik text-white z-20 w-full text-center bottom-0 mb-6 sm:mb-12 xl:text-5xl xl:mb-16"
         >
           We Don't Just Fix. We Care.
         </h1>
@@ -18,13 +18,13 @@
         ></div>
       </div>
     </div>
-    <div class="px-6 py-12 sm:px-20 sm:py-20 lg:px-32">
+    <div class="px-6 py-12 sm:px-20 sm:py-20 lg:px-32 xl:py-24 xl:px-40 xl:max-w-xxl mx-auto">
       <div>
         <span class="text-xs uppercase text-gray-500 tracking-wide sm:text-sm font-segoe"
           >vision</span
         >
         <p
-          class="text-sm font-graphik font-semibold text-autocare-blue w-11/12 max-w-sm mt-2 sm:text-2xl sm:max-w-xl sm:leading-tight"
+          class="text-sm font-graphik font-semibold text-autocare-blue w-11/12 max-w-sm xl:max-w-exl mt-2 sm:text-2xl xl:text-4xl sm:max-w-xl sm:leading-tight"
         >
           We envision a world where everyone has access to affordable, timely,
           and transparent automobile care, repair, and maintenance. We want to
@@ -37,7 +37,7 @@
       <div class="mt-5 sm:mt-12">
         <div class="sm:flex sm:justify-between">
           <div>
-            <h3 class="text-base sm:text-xl text-autocare-blue font-graphik font-semibold">
+            <h3 class="text-base sm:text-xl xl:text-3xl text-autocare-blue font-graphik font-semibold">
               Our Values
             </h3>
             <p
@@ -47,7 +47,7 @@
             </p>
           </div>
           <ol
-            class="mt-5 text-autocare-blue font-graphik font-semibold text-sm sm:mt-0 sm:text-xl"
+            class="mt-5 text-autocare-blue font-graphik font-semibold text-sm sm:mt-0 sm:text-xl xl:text-3xl"
           >
             <li>1. Customer first</li>
             <li>2. Excellent service</li>
@@ -64,7 +64,7 @@
       <div class="mt-5 sm:mt-12">
         <div class="sm:flex mt-sm:justify-between">
           <div class="sm:w-7/12">
-            <h3 class="text-base text-autocare-blue font-graphik font-semibold sm:text-xl">
+            <h3 class="text-base text-autocare-blue font-graphik font-semibold sm:text-xl xl:text-3xl">
               The Team
             </h3>
             <p
@@ -78,7 +78,7 @@
             <div class="mt-10 sm:mt-0 sm:w-2/5">
               <div class="bg-gray-400 h-32 sm:h-40 w-32 sm:w-full"></div>
               <div
-                class="text-autocare-blue leading-tight mt-3 text-sm sm:text-center"
+                class="text-autocare-blue leading-tight mt-3 text-sm xl:text-lg sm:text-center"
               >
                 <h3 class="font-segoe-bold">Engr. Timothy Adebiyi</h3>
                 <p class="font-segoe">CEO</p>
@@ -87,7 +87,7 @@
             <div class="mt-10 sm:mt-0 sm:w-2/5">
               <div class="bg-gray-400 h-32 sm:h-40 w-32 sm:w-full"></div>
               <div
-                class="text-autocare-blue leading-tight mt-3 text-sm sm:text-center"
+                class="text-autocare-blue leading-tight mt-3 text-sm xl:text-lg sm:text-center"
               >
                 <h3 class="font-segoe-bold">Mr. Lorem Ipsum</h3>
                 <p class="font-segoe">Head Engineer</p>
