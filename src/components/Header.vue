@@ -116,5 +116,6 @@ export default {
       this.isopen = !this.isopen;
     },
   },
+  name: 'Header'
 };
 </script>
