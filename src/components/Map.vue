@@ -1,13 +1,10 @@
 <template>
   <div>
-    <div class="h-16 w-full px-10 bg-search-gray py-3">
-      <div class="relative w-4/5 sm:w-2/5 flex items-center">
-        <button @click="addMarker" class="absolute left-0 ml-3">
-          <img src="../assets/img/search-menu.svg" alt="search" class="h-4" />
-        </button>
+    <div class="h-16 w-full px-10 sm:px-32 sm:py-5 sm:h-auto lg:px-56 xl:px-64 bg-search-gray py-3">
+      <div class="relative w-4/5 sm:w-2/5 xl:w-1/3 flex items-center">
         <gmap-autocomplete
           @place_changed="setPlace"
-          class="rounded-xl px-12 py-2 w-full font-segoe border focus:outline-none truncate text-autocare-blue border-map-gray text-sm"
+          class="rounded-lg px-6 py-2 w-full font-segoe border focus:outline-none truncate text-autocare-blue border-map-gray text-sm"
           placeholder="Enter location"
         >
         </gmap-autocomplete>
