@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="h-16 w-full px-10 sm:px-32 sm:py-5 sm:h-auto lg:px-56 xl:px-64 bg-search-gray py-3">
+    <div
+      class="h-16 w-full px-10 sm:px-32 sm:py-5 sm:h-auto lg:px-56 xl:px-64 bg-search-gray py-3"
+    >
       <div class="relative w-4/5 sm:w-2/5 xl:w-1/3 flex items-center">
         <gmap-autocomplete
           @place_changed="setPlace"
@@ -8,7 +10,10 @@
           placeholder="Enter location"
         >
         </gmap-autocomplete>
-        <button @click="addMarker" class="absolute right-0 mr-3">
+        <button
+          @click="addMarker"
+          class="absolute right-0 mr-3 focus:outline-none"
+        >
           <img src="../assets/img/search.svg" alt="search" class="h-6" />
         </button>
       </div>
