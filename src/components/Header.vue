@@ -4,17 +4,20 @@
       class="bg-autocare-blue px-6 py-4 sm:flex sm:justify-between sm:items-center lg:px-10"
     >
       <div class="flex justify-between items-center sm:w-3/12">
-        <img
-          src="../assets/img/logo.svg"
-          alt="logo"
-          class="lg:hidden block h-8 w-auto"
-        />
-        <img
-          src="../assets/img/logowithtext.svg"
-          alt="logo with text"
-          class="h-8 hidden lg:block"
-        />
-
+        <a href="/">
+          <img
+            src="../assets/img/logo.svg"
+            alt="logo"
+            class="lg:hidden block h-8 w-auto"
+          />
+        </a>
+        <a href="/">
+          <img
+            src="../assets/img/logowithtext.svg"
+            alt="logo with text"
+            class="h-8 hidden lg:block"
+          />
+        </a>
         <button
           class="focus:outline-none sm:hidden"
           type="button"
@@ -58,30 +61,30 @@
           <div
             class="text-right mt-5 sm:flex sm:text-left sm:mt-0 sm:font-hairline sm:justify-center lg:justify-between"
           >
-            <a
-              href="/blog"
+            <router-link
+              to="/blog"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base"
-              >Learn</a
+              >Learn</router-link
             >
-            <a
-              href="/find"
+            <router-link
+              to="/find"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
-              >Find a Mechanic</a
+              >Find a Mechanic</router-link
             >
             <a
               href="#"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Services</a
             >
-            <a
-              href="/about"
+            <router-link
+              to="/about"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
-              >About</a
+              >About</router-link
             >
-            <a
-              href="/contact"
+            <router-link
+              to="/contact"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
-              >Contact</a
+              >Contact</router-link
             >
           </div>
         </div>
