@@ -4,6 +4,7 @@ import Home from '@/components/Home.vue';
 import About from '@/components/About.vue';
 import Learn from '@/components/Learn.vue';
 import Contact from '@/components/Contacts.vue';
+import Find from '@/components/Map.vue';
 
 Vue.use(VueRouter)
 
@@ -30,4 +31,9 @@ export default new VueRouter({
       name: 'contact-page',
       component: Contact
     },
+    {
+      path: '/find',
+      name: 'find-mechanic',
+      component: Find
+    }
 ]})
