@@ -59,12 +59,12 @@
             class="text-right mt-5 sm:flex sm:text-left sm:mt-0 sm:font-hairline sm:justify-center lg:justify-between"
           >
             <a
-              href="#"
+              href="/blog"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base"
               >Learn</a
             >
             <a
-              href="#"
+              href="/find"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Find a Mechanic</a
             >
@@ -74,22 +74,22 @@
               >Services</a
             >
             <a
-              href="#"
+              href="/about"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >About</a
             >
             <a
-              href="#"
+              href="/contact"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Contact</a
             >
           </div>
         </div>
         <div
-          class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between"
+          class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between xl:justify-around"
         >
           <button
-            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none hover:bg-autocare-orange hover:border-transparent hover:text-black sm:border-white sm:text-white sm:border"
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border-white sm:text-white sm:border"
           >
             Login
           </button>

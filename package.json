@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "tailwindcss": "^1.9.6",
     "vue": "^2.6.11",
+    "vue2-google-maps": "^0.10.7",
     "vue-router": "^3.4.9"
   },
   "devDependencies": {

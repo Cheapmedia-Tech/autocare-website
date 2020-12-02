@@ -6,6 +6,8 @@ module.exports = {
         "autocare-orange": "#FF970D",
         "autocare-gold": "#F1C644",
         "autocare-bg": "#FAFAFA",
+        "map-gray": "#B5BFBF",
+        "hover-gray": "#C4C4C4",
       },
       height: {
         "10/12": "83.333%",
