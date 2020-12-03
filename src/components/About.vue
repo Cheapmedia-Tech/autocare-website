@@ -41,7 +41,7 @@
               Our Values
             </h3>
             <p
-              class="text-xs sm:text-sm font-segoe-light text-gray-700 w-2/3 max-w-sm mt-2 leading-tight"
+              class="text-sm sm:text-base font-segoe text-gray-700 w-2/3 max-w-sm mt-2 leading-tight"
             >
               These are the keywords that define how we behave.
             </p>
@@ -68,7 +68,7 @@
               The Team
             </h3>
             <p
-              class="text-xs font-segoe-light text-gray-700 w-2/3 max-w-sm mt-2 leading-tight sm:text-sm"
+              class="text-sm font-segoe text-gray-700 w-2/3 max-w-sm mt-2 leading-tight sm:text-base"
             >
               We are a group of passionate and experienced engineers driven by
               excellence.
