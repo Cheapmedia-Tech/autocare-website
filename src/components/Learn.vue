@@ -26,7 +26,7 @@
           </p>
 
           <a
-            href="learn.html"
+            href="#"
             class="block mt-3 xl:mt-8 text-xs uppercase font-segoe tracking-wide text-autocare-blue"
             >read more
             <span>
