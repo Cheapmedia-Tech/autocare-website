@@ -105,7 +105,7 @@
               <img src="../assets/img/down-arrow.svg" class="ml-2" alt="" />
             </button>
             <div
-              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-2 w-48"
+              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
               :class="{ hidden: !signup, block: signup }"
             >
               <a class="py-1" href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit">Register as User</a>
