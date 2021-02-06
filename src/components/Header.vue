@@ -96,11 +96,15 @@
           >
             Login
           </button>
-          <button
-            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none"
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
           >
-            Sign up
-          </button>
+            <button
+              class="px-6 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none"
+            >
+              Sign up
+            </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -119,6 +123,6 @@ export default {
       this.isopen = !this.isopen;
     },
   },
-  name: 'Header'
+  name: "Header",
 };
 </script>
