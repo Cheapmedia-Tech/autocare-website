@@ -1,11 +1,9 @@
 <template>
   <div>
     <ShopHeader class="fixed w-full z-50" />
-    <div
-      class="flex divide-x-2 lg:divide-register-body pt-16 sm:pt-20 lg:pt-24"
-    >
+    <div class="flex divide-x-2 lg:divide-hover-gray pt-16 sm:pt-20 lg:pt-24">
       <div
-        class="lg:w-3/12 xl:w-auto absolute border-r lg:border-none border-register-body lg:relative z-30 bg-white h-full"
+        class="lg:w-3/12 xl:w-auto absolute border-r lg:border-none border-hover-gray lg:relative z-30 bg-white h-full lg:h-auto"
         :class="{ hidden: !isopen, flex: isopen, 'lg:block': !isopen }"
       >
         <Sidebar @closed="closeside" />

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div
       class="h-16 w-full px-10 sm:px-32 sm:py-5 sm:h-auto lg:px-56 xl:px-64 bg-search-gray py-3"
     >
@@ -34,8 +35,10 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
 export default {
   name: "Map",
+  components: { Header },
   data() {
     return {
       // default to Montreal to keep it simple
@@ -68,7 +71,7 @@ export default {
         this.currentPlace = null;
       }
     },
-    geolocate: function() {
+    geolocate: function () {
       navigator.geolocation.getCurrentPosition((position) => {
         this.center = {
           lat: position.coords.latitude,

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div
       class="h-screen sm:h-full bg-autocare-blue py-16 px-12 sm:flex sm:justify-between sm:px-16 lg:px-40 xl:px-64 xl:pt-32"
     >
@@ -33,7 +34,9 @@
         />
       </div>
     </div>
-    <div class="px-4 py-12 sm:py-16 lg:px-12 xl:py-24 xl:px-40 xl:max-w-xxl mx-auto">
+    <div
+      class="px-4 py-12 sm:py-16 lg:px-12 xl:py-24 xl:px-40 xl:max-w-xxl mx-auto"
+    >
       <div class="flex flex-wrap justify-center sm:justify-between sm:mx-10">
         <img
           src="../assets/img/toyota.png"
@@ -176,7 +179,11 @@
             <div
               class="border border-autocare-gold w-16 h-16 xl:w-24 xl:h-24 rounded-lg bg-white shadow-sm"
             >
-              <img src="../assets/img/service-dollar.svg" alt="" class="p-3 xl:mt-2 mx-auto xl:h-2/3" />
+              <img
+                src="../assets/img/service-dollar.svg"
+                alt=""
+                class="p-3 xl:mt-2 mx-auto xl:h-2/3"
+              />
             </div>
             <p
               class="ml-4 w-1/2 font-segoe leading-tight text-gray-800 text-base xl:text-lg"
@@ -188,7 +195,11 @@
             <div
               class="border border-autocare-gold w-16 h-16 xl:w-24 xl:h-24 rounded-lg bg-white shadow-sm"
             >
-              <img src="../assets/img/service-car.svg" alt="" class="p-4 mx-auto xl:h-2/3" />
+              <img
+                src="../assets/img/service-car.svg"
+                alt=""
+                class="p-4 mx-auto xl:h-2/3"
+              />
             </div>
             <p
               class="ml-4 w-1/2 font-segoe leading-tight text-gray-800 text-base xl:text-lg"
@@ -200,7 +211,11 @@
             <div
               class="border border-autocare-gold w-16 h-16 xl:w-24 xl:h-24 rounded-lg bg-white shadow-sm"
             >
-              <img src="../assets/img/service-help.svg" alt="" class="p-3 xl:mt-2 mx-auto xl:h-2/3" />
+              <img
+                src="../assets/img/service-help.svg"
+                alt=""
+                class="p-3 xl:mt-2 mx-auto xl:h-2/3"
+              />
             </div>
             <p
               class="ml-4 w-1/2 font-segoe leading-tight text-gray-800 text-base xl:text-lg"
@@ -498,7 +513,11 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
 export default {
-  name: 'Home'
+  name: "Home",
+  components: {
+    Header,
+  },
 };
 </script>

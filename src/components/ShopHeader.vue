@@ -17,7 +17,7 @@
           />
         </router-link>
       </div>
-      <div class="flex sm:w-2/12 w-3/12 justify-between">
+      <div class="flex sm:w-3/12 w-4/12 justify-between">
         <div class="lg:hidden">
           <div class="flex items-start justify-end">
             <a
