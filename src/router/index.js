@@ -7,6 +7,7 @@ import Contact from "@/components/Contacts.vue";
 import Find from "@/components/Map.vue";
 import Shop from "@/components/Shop.vue";
 import WebDevelopment from "@/components/WebDevelopment.vue";
+import Checkout from "@/components/Checkout.vue";
 
 Vue.use(VueRouter);
 
@@ -37,6 +38,11 @@ export default new VueRouter({
       path: "/find",
       name: "find-mechanic",
       component: Find,
+    },
+    {
+      path: "/checkout",
+      name: "checkout",
+      component: Checkout,
     },
     {
       path: "/shop",
