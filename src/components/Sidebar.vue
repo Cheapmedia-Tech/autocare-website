@@ -13,7 +13,12 @@
       </p>
 
       <div class="flex flex-col space-y-4 mt-4">
-        <div v-for="(categories, c) in categorylist" :key="c" class="">
+        <div
+          v-for="(categories, c) in categorylist"
+          :key="c"
+          class=""
+          @click="closed"
+        >
           <Categories :categories="categories" />
         </div>
       </div>
