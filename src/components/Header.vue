@@ -77,6 +77,11 @@
               >Services</a
             >
             <router-link
+              to="/shop"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
+              >Shop</router-link
+            >
+            <router-link
               to="/about"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >About</router-link
@@ -108,7 +113,11 @@
               class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
               :class="{ hidden: !signup, block: signup }"
             >
-              <a class="py-1" href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit">Register as User</a>
+              <a
+                class="py-1"
+                href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
+                >Register as User</a
+              >
               <a
                 class="py-1"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
