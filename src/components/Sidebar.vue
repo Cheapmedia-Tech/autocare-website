@@ -9,7 +9,7 @@
       </button>
       <p class="font-semibold ml-3 text-body-text mt-3 lg:mt-0">
         Select one or more <br class="hidden xl:block" />
-        channels
+        categories
       </p>
 
       <div class="flex flex-col space-y-4 mt-4">
@@ -38,40 +38,24 @@ export default {
     return {
       categorylist: [
         {
-          title: "Billboard Advertising",
+          title: "Transmission & Fluids",
           link: "#",
         },
         {
-          title: "Radio Advertising",
+          title: "Engine",
           link: "#",
         },
         {
-          title: "Television Advertising",
+          title: "Cooling",
           link: "#",
         },
         {
-          title: "Indoor/Cinema Advertising",
+          title: "Electrical",
           link: "#",
         },
         {
-          title: "Newspaper & Print Media",
-          link: "#",
-        },
-        {
-          title: "Traffic Advertising",
-          link: "#",
-        },
-        {
-          title: "Online Blogs and Newspapers",
-          link: "#",
-        },
-        {
-          title: "Website Development",
+          title: "Hydraulics",
           link: "/shop/web",
-        },
-        {
-          title: "Social Media Advertising",
-          link: "#",
         },
       ],
     };

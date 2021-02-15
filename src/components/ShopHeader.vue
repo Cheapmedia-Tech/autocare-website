@@ -52,20 +52,39 @@
       </div>
     </div>
     <div
-      class="justify-between space-y-2 lg:space-y-0 inter text-nav-text lg:text-white w-11/12 sm:w-auto absolute border-2 lg:border-none border-nav-text bg-white lg:bg-transparent rounded-md top-16 sm:top-20 sm:left-1/2 bottom-auto sm:right-8 lg:inset-0 lg:relative lg:w-9/12 lg:flex lg:flex-row sm:justify-between lg:items-center p-4 sm:p-5 lg:p-0 flex flex-col text-right inter"
+      class="justify-between space-y-2 lg:space-y-0 inter text-autocare-blue lg:text-white w-11/12 sm:w-auto absolute border-2 lg:border-none border-nav-text bg-white lg:bg-transparent rounded-md top-16 sm:top-20 sm:left-1/2 bottom-auto sm:right-8 lg:inset-0 lg:relative lg:w-8/12 lg:flex lg:flex-row sm:justify-between lg:items-center p-4 sm:p-5 lg:p-0 flex flex-col text-right inter"
       :class="{ hidden: !isopen, flex: isopen }"
     >
       <router-link
-        to="/channels"
-        class="px-1 lg:hover:border-b border-nav-text lg:border-white"
-        >Catalogue</router-link
+        to="/blog"
+        class="block py-2 border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-xs xl:text-base"
+        >Learn</router-link
       >
-      <a href="#" class="px-1 lg:hover:border-b lg:border-white">Services</a>
-      <a href="#" class="px-1 lg:hover:border-b lg:border-white"
-        >Request Media Plan</a
+      <router-link
+        to="/find"
+        class="block py-2 border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-xs xl:text-base sm:ml-4"
+        >Find a Mechanic</router-link
       >
-      <a href="#" class="px-1 lg:hover:border-b lg:border-white">The Team</a>
-      <a href="#" class="px-1 lg:hover:border-b lg:border-white">Services</a>
+      <a
+        href="#"
+        class="block py-2 border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-xs xl:text-base sm:ml-4"
+        >Services</a
+      >
+      <router-link
+        to="/shop/web"
+        class="block py-2 border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-xs xl:text-base sm:ml-4"
+        >Shop</router-link
+      >
+      <router-link
+        to="/about"
+        class="block py-2 border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-xs xl:text-base sm:ml-4"
+        >About</router-link
+      >
+      <router-link
+        to="/contact"
+        class="block py-2 border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-xs xl:text-base sm:ml-4"
+        >Contact</router-link
+      >
       <div class="hidden lg:block">
         <div class="flex items-start justify-end">
           <a

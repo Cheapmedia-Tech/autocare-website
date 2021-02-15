@@ -63,4 +63,11 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      fontWeight: ["hover", "focus"],
+      borderWidth: ["hover", "focus"],
+      display: ["hover", "focus", "group-focus"],
+    },
+  },
 };
