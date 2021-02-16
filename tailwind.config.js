@@ -1,5 +1,17 @@
 module.exports = {
   theme: {
+    minHeight: {
+      "60": "15rem",
+      "48": "12rem",
+      "44": "11rem",
+    },
+    minWidth: {
+      "250px": "250px",
+      "250px": "250px",
+    },
+    maxWidth: {
+      "390px": "390px",
+    },
     extend: {
       colors: {
         "autocare-blue": "#132F44",
@@ -8,6 +20,7 @@ module.exports = {
         "autocare-bg": "#FAFAFA",
         "map-gray": "#B5BFBF",
         "hover-gray": "#C4C4C4",
+        "cart-button": "#3A9860",
       },
       height: {
         "10/12": "83.333%",
@@ -48,6 +61,13 @@ module.exports = {
         graphik: ["Graphik", "sans-serif"],
         "graphic-super": ["Graphik Super", "sans-serif"],
       },
+    },
+  },
+  variants: {
+    extend: {
+      fontWeight: ["hover", "focus"],
+      borderWidth: ["hover", "focus"],
+      display: ["hover", "focus", "group-focus"],
     },
   },
 };

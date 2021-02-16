@@ -77,6 +77,11 @@
               >Services</a
             >
             <router-link
+              to="/shop/hydraulics"
+              class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
+              >Shop</router-link
+            >
+            <router-link
               to="/about"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >About</router-link
@@ -93,15 +98,34 @@
         >
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
           <button
-            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border-white sm:text-white sm:border"
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border-white sm:text-white sm:border"
           >
             Login
           </button>
-          <button
-            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-1 lg:py-2 sm:h-auto focus:outline-none"
-          >
-            Sign up
-          </button>
+          <div class="relative">
+            <button
+              @click="signuptoggle"
+              class="px-4 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center"
+            >
+              <p>Sign up |</p>
+              <img src="../assets/img/down-arrow.svg" class="ml-2" alt="" />
+            </button>
+            <div
+              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
+              :class="{ hidden: !signup, block: signup }"
+            >
+              <a
+                class="py-1"
+                href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
+                >Register as User</a
+              >
+              <a
+                class="py-1"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
+                >Register as Mechanic</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -113,13 +137,17 @@ export default {
   data() {
     return {
       isopen: false,
+      signup: false,
     };
   },
   methods: {
     toggle() {
       this.isopen = !this.isopen;
     },
+    signuptoggle() {
+      this.signup = !this.signup;
+    },
   },
-  name: 'Header'
+  name: "Header",
 };
 </script>

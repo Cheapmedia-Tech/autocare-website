@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="w-full">
       <div class="relative">
         <h1
@@ -18,9 +19,12 @@
         ></div>
       </div>
     </div>
-    <div class="px-6 py-12 sm:px-20 sm:py-20 lg:px-32 xl:py-24 xl:px-40 xl:max-w-xxl mx-auto">
+    <div
+      class="px-6 py-12 sm:px-20 sm:py-20 lg:px-32 xl:py-24 xl:px-40 xl:max-w-xxl mx-auto"
+    >
       <div>
-        <span class="text-xs uppercase text-gray-500 tracking-wide sm:text-sm font-segoe"
+        <span
+          class="text-xs uppercase text-gray-500 tracking-wide sm:text-sm font-segoe"
           >vision</span
         >
         <p
@@ -37,11 +41,13 @@
       <div class="mt-5 sm:mt-12">
         <div class="sm:flex sm:justify-between">
           <div>
-            <h3 class="text-base sm:text-xl xl:text-3xl text-autocare-blue font-graphik font-semibold">
+            <h3
+              class="text-base sm:text-xl xl:text-3xl text-autocare-blue font-graphik font-semibold"
+            >
               Our Values
             </h3>
             <p
-              class="text-xs sm:text-sm font-segoe-light text-gray-700 w-2/3 max-w-sm mt-2 leading-tight"
+              class="text-sm sm:text-base font-segoe text-gray-700 w-2/3 max-w-sm mt-2 leading-tight"
             >
               These are the keywords that define how we behave.
             </p>
@@ -64,11 +70,13 @@
       <div class="mt-5 sm:mt-12">
         <div class="sm:flex mt-sm:justify-between">
           <div class="sm:w-7/12">
-            <h3 class="text-base text-autocare-blue font-graphik font-semibold sm:text-xl xl:text-3xl">
+            <h3
+              class="text-base text-autocare-blue font-graphik font-semibold sm:text-xl xl:text-3xl"
+            >
               The Team
             </h3>
             <p
-              class="text-xs font-segoe-light text-gray-700 w-2/3 max-w-sm mt-2 leading-tight sm:text-sm"
+              class="text-sm font-segoe text-gray-700 w-2/3 max-w-sm mt-2 leading-tight sm:text-base"
             >
               We are a group of passionate and experienced engineers driven by
               excellence.
@@ -101,7 +109,11 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
 export default {
-  name: 'About'
+  name: "About",
+  components: {
+    Header,
+  },
 };
 </script>
