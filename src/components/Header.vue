@@ -77,7 +77,7 @@
               >Services</a
             >
             <router-link
-              to="/shop/web"
+              to="/shop/hydraulics"
               class="block py-2 text-autocare-blue border-b border-transparent hover:border-autocare-blue sm:hover:border-autocare-orange font-segoe sm:py-1 sm:text-white sm:text-xs xl:text-base sm:ml-4"
               >Shop</router-link
             >

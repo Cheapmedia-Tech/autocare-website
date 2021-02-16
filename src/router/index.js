@@ -6,7 +6,7 @@ import Learn from "@/components/Learn.vue";
 import Contact from "@/components/Contacts.vue";
 import Find from "@/components/Map.vue";
 import Shop from "@/components/Shop.vue";
-import WebDevelopment from "@/components/WebDevelopment.vue";
+import Hydraulics from "@/components/Hydraulics.vue";
 import Checkout from "@/components/Checkout.vue";
 
 Vue.use(VueRouter);
@@ -50,9 +50,9 @@ export default new VueRouter({
       component: Shop,
       children: [
         {
-          path: "/shop/web",
+          path: "/shop/hydraulics",
           name: "web",
-          component: WebDevelopment,
+          component: Hydraulics,
         },
       ],
     },

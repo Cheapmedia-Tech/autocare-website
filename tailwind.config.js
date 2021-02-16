@@ -6,7 +6,7 @@ module.exports = {
       "44": "11rem",
     },
     minWidth: {
-      "350px": "350px",
+      "250px": "250px",
       "250px": "250px",
     },
     maxWidth: {

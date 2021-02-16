@@ -1,41 +1,35 @@
 <template>
-  <div class="shadow-xl rounded-t-md group">
-    <div class="h-64 relative rounded-t-md">
+  <div class="shadow-xl group">
+    <div class="h-32 relative">
       <div
-        class="absolute bg-gray-400 opacity-50 group-hover:bg-gray-700 rounded-t-md z-20 inset-0"
+        class="absolute bg-gray-400 opacity-50 group-hover:bg-gray-700 z-20 inset-0"
       ></div>
       <img
-        :src="adverts.imagesrc"
+        :src="item.imagesrc"
         alt="img"
         class="object-cover relative h-full w-full"
       />
     </div>
 
-    <div class="h-52 p-3">
+    <div class="h-28 p-2">
       <div class="text-xs flex flex-col justify-between h-full">
-        <p class="font-semibold text-base">{{ adverts.title }}</p>
-        <p class="mt-2 text-body-text">
-          {{ adverts.description }}
-        </p>
+        <div>
+          <p class="font-semibold text-base">{{ item.title }}</p>
+          <p class="mt-2 text-body-text">NGN {{ item.price }}</p>
+        </div>
 
-        <div class="flex justify-between mt-3 xl:mt-5">
+        <div class="flex justify-between">
           <p class="inline border-b-2 text-text-grey border-text-grey">
-            {{ adverts.vendor }}
-          </p>
-          <p class="uppercase text-xxs">
-            starts from
-            <span class="text-xs">NGN {{ adverts.price }}</span>
+            Model: {{ item.model }}
           </p>
         </div>
 
-        <div class="flex justify-between mt-5 text-register-body">
+        <div class="flex justify-between text-register-body">
           <div class="flex">
-            <!-- <img src="../assets/img/location.svg" alt="location" /> -->
-            <p class="text-xxs">{{ adverts.location }}</p>
+            <p class="text-xxs">{{ item.year }}</p>
           </div>
           <div class="flex items-center">
-            <img :src="adverts.channelicon" class="h-3" alt="i" />
-            <p class="uppercase ml-1 text-xxs">{{ adverts.channel }}</p>
+            <p class="text-xxs">{{ item.weight }}</p>
           </div>
         </div>
       </div>
@@ -45,6 +39,6 @@
 
 <script>
 export default {
-  props: ["adverts"],
+  props: ["item"],
 };
 </script>
