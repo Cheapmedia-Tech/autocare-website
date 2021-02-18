@@ -17,14 +17,12 @@ export default {
     $route: {
       immediate: true,
       handler(to) {
-        document.title = to.meta.title || 'My AutoCare';
-      }
+        document.title = to.meta.title || "My AutoCare";
+      },
     },
-  }
+  },
 };
 </script>
-
-
 
 <style src="./assets/css/tailwind.css"></style>
 <style src="./assets/css/fonts.css"></style>

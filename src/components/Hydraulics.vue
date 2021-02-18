@@ -8,7 +8,7 @@
 
       <div class="flex flex-wrap">
         <div
-          v-for="(items, a) in itemcards"
+          v-for="(items, a) in pageOfItems"
           :key="a"
           class="w-2/12 min-w-250px px-4 mt-8"
         >
@@ -21,6 +21,13 @@
           </button>
         </div>
       </div>
+
+      <Pagination
+        :items="itemcards"
+        :pageSize="15"
+        @changePage="onChangePage"
+        class="flex justify-center w-full mt-12"
+      />
     </div>
   </div>
 </template>
@@ -28,55 +35,34 @@
 <script>
 import { EventBus } from "../../event-bus.js";
 import ItemCard from "@/components/ItemCard.vue";
+import Pagination from "@/components/Pagination.vue";
+import itemdata from "../data/autocare-parts.json";
 export default {
   components: {
     ItemCard,
+    Pagination,
   },
   data() {
     return {
       cart: [],
-      itemcards: [
-        {
-          title: "Shock Absorber",
-          price: "60,000",
-          imagesrc: "Chief Executive Officer ",
-          model: "Ford EC",
-          year: "2003",
-          weight: "1kg",
-        },
-        {
-          title: "Shock Absorber 2",
-          price: "105,000",
-          imagesrc: "Chief Executive Officer ",
-          model: "Ford EC",
-          year: "2003",
-          weight: "1kg",
-        },
-        {
-          title: "Shock Absorber 3",
-          price: "150,000",
-          imagesrc: "Chief Executive Officer ",
-          model: "Ford EC",
-          year: "2003",
-          weight: "1kg",
-        },
-        {
-          title: "Shock Absorber 4",
-          price: "240,000",
-          imagesrc: "Chief Executive Officer ",
-          model: "Ford EC",
-          year: "2003",
-          weight: "1kg",
-        },
-      ],
+      itemcards: itemdata,
+      currentPage: 1,
+      perPage: 2,
+      total: 20,
+      pageOfItems: [],
     };
   },
   methods: {
+    onChangePage(pageOfItems) {
+      // update page of items
+      this.pageOfItems = pageOfItems;
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    },
     addtocart(a) {
-      if (this.cart.indexOf(this.itemcards[a].title) !== -1) {
-        this.cart.splice(this.cart.indexOf(this.itemcards[a].title), 1);
+      if (this.cart.indexOf(this.itemcards[a].serial) !== -1) {
+        this.cart.splice(this.cart.indexOf(this.itemcards[a].serial), 1);
       } else {
-        this.cart.push(this.itemcards[a].title);
+        this.cart.push(this.itemcards[a].name);
       }
       this.saveItem();
       EventBus.$emit("cartlength", this.cart.length);
