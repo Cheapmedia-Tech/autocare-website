@@ -33,7 +33,7 @@
       :style="liStyles"
     >
       <a
-        class="page-link hover:border-b border-autocare-blue"
+        class="page-link border-b hover:border-autocare-blue"
         @click="setPage(page)"
         :style="aStyles"
         >{{ page }}</a

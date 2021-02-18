@@ -9,7 +9,9 @@
     <div class="h-28 p-2">
       <div class="text-xs flex flex-col justify-between h-full">
         <div>
-          <p class="font-semibold text-base">{{ item.name }}</p>
+          <p class="font-semibold text-base whitespace-nowrap truncate">
+            {{ item.name }}
+          </p>
           <p class="mt-2 text-body-text">NGN {{ item.price }}</p>
         </div>
 

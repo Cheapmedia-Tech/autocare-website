@@ -21,6 +21,9 @@ module.exports = {
         "map-gray": "#B5BFBF",
         "hover-gray": "#C4C4C4",
         "cart-button": "#3A9860",
+        "dark-gray": "#999999",
+        "light-subtext": "#555555",
+        "dark-subtext": "#263238",
       },
       height: {
         "10/12": "83.333%",
