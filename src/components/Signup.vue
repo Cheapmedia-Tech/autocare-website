@@ -32,12 +32,13 @@
 
       <hr class="border-dark-gray mt-4" />
 
-      <div class="py-8 flex flex-wrap justify-between">
+      <form class="py-8 flex flex-wrap justify-between" @submit.prevent>
         <div class="sm:w-5/12 w-full">
           <p class="font-semibold">First Name</p>
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.firstname"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7 sm:mt-0">
@@ -45,6 +46,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.lastname"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -52,6 +54,7 @@
           <input
             type="number"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.number"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -59,6 +62,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.email"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -66,6 +70,7 @@
           <input
             type="password"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.password"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -73,16 +78,49 @@
           <input
             type="password"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.confirmpassword"
           />
         </div>
-      </div>
+        <div class="sm:w-5/12 w-full mt-7">
+          <p class="font-semibold">Location (State)</p>
+          <input
+            type="text"
+            class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.location"
+          />
+        </div>
+        <div class="sm:w-5/12 w-full mt-7">
+          <p class="font-semibold">Car Model</p>
+          <input
+            type="text"
+            class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="signupForm.car_model"
+          />
+        </div>
+        <div class="w-full mt-7">
+          <p class="font-semibold">Details of your issue</p>
+          <textarea
+            type="text"
+            class="border border-dark-gray rounded-md focus:outline-none w-full h-44 mt-2 py-3 px-5"
+            v-model.trim="signupForm.complaint"
+          />
+        </div>
+      </form>
       <div class="flex items-center">
         <input type="checkbox" class="rounded-md border border-dark-gray" />
         <p class="ml-4">I agree processing my personal data</p>
       </div>
+      <div class="flex items-center mt-4">
+        <router-link to="/login" class="underline text-dark-gray"
+          >Already have an account? Login</router-link
+        >
+      </div>
       <div class="flex sm:justify-end justify-center sm:mt-3 mt-7">
-        <button class="px-8 py-2 text-white rounded-md bg-autocare-blue">
-          Next
+        <button
+          class="px-8 py-2 text-white rounded-md bg-autocare-blue"
+          @click="signup()"
+        >
+          Sign up
         </button>
       </div>
     </div>
@@ -90,5 +128,35 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      signupForm: {
+        firstname: "",
+        lastname: "",
+        number: "",
+        email: "",
+        password: "",
+        confirmpassword: "",
+        location: "",
+        car_model: "",
+        complaint: "",
+      },
+    };
+  },
+  methods: {
+    signup() {
+      this.$store.dispatch("signup", {
+        email: this.signupForm.email,
+        password: this.signupForm.password,
+        firstname: this.signupForm.firstname,
+        lastname: this.signupForm.lastname,
+        number: this.signupForm.number,
+        car_model: this.signupForm.car_model,
+        location: this.signupForm.location,
+        complaint: this.signupForm.complaint,
+      });
+    },
+  },
+};
 </script>

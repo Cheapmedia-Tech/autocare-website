@@ -87,6 +87,7 @@
       >
       <div
         class="flex justify-between items-center sm:w-12/12 lg:w-4/12 xl:w-3/12 sm:justify-end lg:justify-around xl:justify-around"
+        v-if="showAuth"
       >
         <button
           class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border lg:border-white"
@@ -142,6 +143,7 @@
 <script>
 import { EventBus } from "../../event-bus.js";
 import Modal from "./Modal.vue";
+import { mapState } from "vuex";
 export default {
   components: {
     Modal,
@@ -172,6 +174,12 @@ export default {
     EventBus.$on("cartlength", (cartlength) => {
       this.length = cartlength;
     });
+  },
+  computed: {
+    ...mapState(["userProfile"]),
+    showAuth() {
+      return Object.keys(this.userProfile).length > 1;
+    },
   },
 };
 </script>

@@ -39,8 +39,8 @@ const store = new Vuex.Store({
       await fb.usersCollection.doc(user.uid).set({
         firstname: form.firstname,
         lastname: form.lastname,
-        carmodel: form.carmodel,
-        phone: form.phone,
+        car_model: form.car_model,
+        number: form.number,
         complaint: form.complaint,
         location: form.location,
       });

@@ -95,6 +95,7 @@
         </div>
         <div
           class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between xl:justify-around"
+          v-if="showAuth"
         >
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
@@ -130,17 +131,38 @@
             </div>
           </div>
         </div>
+        <div v-else>
+          <div class="relative flex justify-end">
+            <button
+              @click="profiletoggle"
+              class="px-4 py-1 h-10 w-10 bg-white font-segoe border-2 border-autocare-orange rounded-full leading-none focus:outline-none"
+            ></button>
+            <div
+              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-12 w-48 rounded-md"
+              :class="{ hidden: !profile, block: profile }"
+            >
+              <a
+                class="py-1"
+                href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
+                >Dashboard</a
+              >
+              <a class="py-1" @click="logout()">Logout</a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
       isopen: false,
       signup: false,
+      profile: false,
     };
   },
   methods: {
@@ -149,6 +171,18 @@ export default {
     },
     signuptoggle() {
       this.signup = !this.signup;
+    },
+    profiletoggle() {
+      this.profile = !this.profile;
+    },
+    logout() {
+      this.$store.dispatch("logout");
+    },
+  },
+  computed: {
+    ...mapState(["userProfile"]),
+    showAuth() {
+      return Object.keys(this.userProfile).length > 1;
     },
   },
   name: "Header",

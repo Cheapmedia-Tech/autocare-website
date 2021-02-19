@@ -27,12 +27,13 @@
 
       <hr class="border-dark-gray mt-4" />
 
-      <div class="py-8 flex flex-wrap justify-between">
+      <form class="py-8 flex flex-wrap justify-between" @submit.prevent>
         <div class="sm:w-5/12 w-full">
           <p class="font-semibold">Email</p>
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="loginForm.email"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7 sm:mt-0">
@@ -40,12 +41,21 @@
           <input
             type="password"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
+            v-model.trim="loginForm.password"
           />
         </div>
+      </form>
+      <div class="flex items-center mt-4">
+        <router-link to="/signup" class="underline text-dark-gray"
+          >Don't have an account? Sign up</router-link
+        >
       </div>
 
       <div class="flex sm:justify-end justify-center sm:mt-3 mt-7">
-        <button class="px-8 py-2 text-white rounded-md bg-autocare-blue">
+        <button
+          class="px-8 py-2 text-white rounded-md bg-autocare-blue"
+          @click="login()"
+        >
           Login
         </button>
       </div>
@@ -54,5 +64,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      loginForm: {
+        email: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("login", {
+        email: this.loginForm.email,
+        password: this.loginForm.password,
+      });
+    },
+  },
+};
 </script>
