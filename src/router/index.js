@@ -10,6 +10,7 @@ import Hydraulics from "@/components/Hydraulics.vue";
 import Checkout from "@/components/Checkout.vue";
 import Signup from "@/components/Signup.vue";
 import Tellusmore from "@/components/Tellusmore.vue";
+import Login from "@/components/Login.vue";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ export default new VueRouter({
       path: "/checkout",
       name: "checkout",
       component: Checkout,
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login,
     },
     {
       path: "/signup",
