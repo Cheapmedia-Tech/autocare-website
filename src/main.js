@@ -1,7 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router/index.js'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router/index.js";
 import * as VueGoogleMaps from "vue2-google-maps";
+
+import JwPagination from "jw-vue-pagination";
+Vue.component("jw-pagination", JwPagination);
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -13,6 +16,6 @@ Vue.use(VueGoogleMaps, {
 Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
+  render: (h) => h(App),
   router,
-}).$mount('#app')
+}).$mount("#app");

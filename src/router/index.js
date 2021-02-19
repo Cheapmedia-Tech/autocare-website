@@ -10,6 +10,8 @@ import Shop from "@/components/Shop.vue";
 import Hydraulics from "@/components/Hydraulics.vue";
 import Checkout from "@/components/Checkout.vue";
 import { auth } from "../firebase";
+import Signup from "@/components/Signup.vue";
+import Tellusmore from "@/components/Tellusmore.vue";
 
 Vue.use(VueRouter);
 
@@ -53,6 +55,16 @@ const router = new VueRouter({
       path: "/checkout",
       name: "checkout",
       component: Checkout,
+    },
+    {
+      path: "/signup",
+      name: "signup",
+      component: Signup,
+    },
+    {
+      path: "/tellusmore",
+      name: "tellusmore",
+      component: Tellusmore,
     },
     {
       path: "/shop",
