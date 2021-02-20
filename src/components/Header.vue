@@ -93,45 +93,7 @@
             >
           </div>
         </div>
-        <div
-          class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between xl:justify-around"
-          v-if="showAuth"
-        >
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
-          >
-            <button
-              class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border-white sm:text-white sm:border"
-            >
-              Login
-            </button>
-          </a>
-          <div class="relative">
-            <button
-              @click="signuptoggle"
-              class="px-4 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center"
-            >
-              <p>Sign up |</p>
-              <img src="../assets/img/down-arrow.svg" class="ml-2" alt="" />
-            </button>
-            <div
-              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
-              :class="{ hidden: !signup, block: signup }"
-            >
-              <a
-                class="py-1"
-                href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
-                >Register as User</a
-              >
-              <a
-                class="py-1"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
-                >Register as Mechanic</a
-              >
-            </div>
-          </div>
-        </div>
-        <div v-else>
+        <div v-if="flag">
           <div class="relative flex justify-end">
             <button
               @click="profiletoggle"
@@ -146,19 +108,57 @@
             </div>
           </div>
         </div>
+        <div
+          class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between xl:justify-around"
+          v-else
+        >
+          <router-link to="/login">
+            <button
+              class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border-white sm:text-white sm:border"
+            >
+              Login
+            </button>
+          </router-link>
+          <div class="relative">
+            <button
+              @click="signuptoggle"
+              class="px-4 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center"
+            >
+              <p>Sign up |</p>
+              <img src="../assets/img/down-arrow.svg" class="ml-2" alt="" />
+            </button>
+            <div
+              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
+              :class="{ hidden: !signup, block: signup }"
+            >
+              <router-link
+                to="/signup"
+                class="py-1"
+                href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
+                >Register as User</router-link
+              >
+              <a
+                class="py-1"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSct7EO-DnGCObwq5xOp25M4AcfKWMPbeq39OVh4yhXkmIE-sQ/viewform?usp=sf_link"
+                >Register as Mechanic</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import firebase from "firebase";
 export default {
   data() {
     return {
       isopen: false,
       signup: false,
       profile: false,
+      flag: false,
     };
   },
   methods: {
@@ -174,12 +174,19 @@ export default {
     logout() {
       this.$store.dispatch("logout");
     },
-  },
-  computed: {
-    ...mapState(["userProfile"]),
-    showAuth() {
-      return Object.keys(this.userProfile).length > 1;
+    isSignedIn() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          this.flag = true;
+        } else {
+          this.flag = false;
+        }
+      });
     },
+  },
+  mounted() {
+    this.isSignedIn();
+    console.log(this.flag);
   },
   name: "Header",
 };
