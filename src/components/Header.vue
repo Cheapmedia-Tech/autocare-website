@@ -141,11 +141,7 @@
               class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-12 w-48 rounded-md"
               :class="{ hidden: !profile, block: profile }"
             >
-              <a
-                class="py-1"
-                href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
-                >Dashboard</a
-              >
+              <router-link class="py-1" to="/dashboard">Dashboard</router-link>
               <a class="py-1" @click="logout()">Logout</a>
             </div>
           </div>
