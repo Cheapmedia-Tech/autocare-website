@@ -89,11 +89,13 @@
         class="flex justify-between items-center sm:w-12/12 lg:w-4/12 xl:w-3/12 sm:justify-end lg:justify-around xl:justify-around"
         v-if="showAuth"
       >
-        <button
-          class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border lg:border-white"
-        >
-          Login
-        </button>
+        <router-link to="/login">
+          <button
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border lg:border-white"
+          >
+            Login
+          </button>
+        </router-link>
         <div class="relative">
           <button
             @click="signuptoggle"
@@ -106,10 +108,11 @@
             class="absolute flex flex-col bg-white text-autocare-blue border border-autocare-blue divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
             :class="{ hidden: !signup, block: signup }"
           >
-            <a
+            <router-link
+              to="/signup"
               class="py-1"
               href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
-              >Register as User</a
+              >Register as User</router-link
             >
             <a
               class="py-1"
