@@ -15,11 +15,13 @@
           Or have any issues with your vehicle? We have an expert ready to
           resolve all your auto problems
         </p>
-        <button
-          class="mt-10 xl:mt-16 text-autocare-blue bg-autocare-orange px-4 py-2 rounded-md uppercase text-sm lg:text-base xl:text-lg font-semibold tracking-wide focus:outline-none font-segoe-bold"
-        >
-          chat with an expert now
-        </button>
+        <router-link to="/signup">
+          <button
+            class="mt-10 xl:mt-16 text-autocare-blue bg-autocare-orange px-4 py-2 rounded-md uppercase text-sm lg:text-base xl:text-lg font-semibold tracking-wide focus:outline-none font-segoe-bold"
+          >
+            chat with an expert now
+          </button>
+        </router-link>
       </div>
       <div class="relative mt-16 sm:mt-10 xl:mt-12 sm:w-1/2">
         <img
@@ -152,7 +154,7 @@
             best services
           </h5>
           <h1
-            class="mt-2 text-autocare-blue text-2xl font-semibold font-graphik text-center leading-tight sm:text-4xl sm:max-w-sm sm:mx-0 sm:text-left xl:text-5xl "
+            class="mt-2 text-autocare-blue text-2xl font-semibold font-graphik text-center leading-tight sm:text-4xl sm:max-w-sm sm:mx-0 sm:text-left xl:text-5xl"
           >
             You deserve the best <br class="block sm:hidden" />
             Auto Care expereince

@@ -65,22 +65,7 @@
             v-model.trim="signupForm.email"
           />
         </div>
-        <div class="sm:w-5/12 w-full mt-7">
-          <p class="font-semibold">Password</p>
-          <input
-            type="password"
-            class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.password"
-          />
-        </div>
-        <div class="sm:w-5/12 w-full mt-7">
-          <p class="font-semibold">Confirm password</p>
-          <input
-            type="password"
-            class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.confirmpassword"
-          />
-        </div>
+
         <div class="sm:w-5/12 w-full mt-7">
           <p class="font-semibold">Location (State)</p>
           <input
@@ -118,17 +103,24 @@
       <div class="flex sm:justify-end justify-center sm:mt-3 mt-7">
         <button
           class="px-8 py-2 text-white rounded-md bg-autocare-blue"
-          @click="signup()"
+          @click="showModal()"
         >
           Sign up
         </button>
       </div>
     </div>
+    <div class="">
+      <modal v-show="isModalVisible" @close="closeModal" />
+    </div>
   </div>
 </template>
 
 <script>
+import Modal from "./Modal.vue";
 export default {
+  components: {
+    Modal,
+  },
   data() {
     return {
       signupForm: {
@@ -142,21 +134,54 @@ export default {
         car_model: "",
         complaint: "",
       },
+      isModalVisible: false,
     };
   },
   methods: {
-    signup() {
-      this.$store.dispatch("signup", {
-        email: this.signupForm.email,
-        password: this.signupForm.password,
-        firstname: this.signupForm.firstname,
-        lastname: this.signupForm.lastname,
-        number: this.signupForm.number,
-        car_model: this.signupForm.car_model,
-        location: this.signupForm.location,
-        complaint: this.signupForm.complaint,
-      });
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
     },
   },
 };
 </script>
+
+<style>
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>

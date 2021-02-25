@@ -87,9 +87,8 @@
       >
       <div
         class="flex justify-between items-center sm:w-12/12 lg:w-4/12 xl:w-3/12 sm:justify-end lg:justify-around xl:justify-around"
-        v-if="showAuth"
       >
-        <router-link to="/login">
+        <router-link to="/login" class="hidden">
           <button
             class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border lg:border-white"
           >
@@ -99,7 +98,7 @@
         <div class="relative">
           <button
             @click="signuptoggle"
-            class="px-4 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center ml-8 lg:ml-0"
+            class="px-4 py-1 h-10 font-segoe text-autocare-blue border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center ml-8 lg:ml-0"
           >
             <p>Sign up |</p>
             <img src="../assets/img/down-arrow.svg" class="ml-2" alt="" />
@@ -145,8 +144,7 @@
 
 <script>
 import { EventBus } from "../../event-bus.js";
-import Modal from "./Modal.vue";
-import { mapState } from "vuex";
+import Modal from "./CartModal.vue";
 export default {
   components: {
     Modal,
@@ -177,12 +175,6 @@ export default {
     EventBus.$on("cartlength", (cartlength) => {
       this.length = cartlength;
     });
-  },
-  computed: {
-    ...mapState(["userProfile"]),
-    showAuth() {
-      return Object.keys(this.userProfile).length > 1;
-    },
   },
 };
 </script>
