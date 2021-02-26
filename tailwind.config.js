@@ -54,6 +54,10 @@ module.exports = {
       right: {
         "1/2": "50%",
       },
+      spacing: {
+        "100": "30rem",
+      },
+
       fontFamily: {
         segoe: ["Segoe UI Regular", "sans-serif"],
         "segoe-light": ["Segoe UI Light", "sans-serif"],

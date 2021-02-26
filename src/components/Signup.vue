@@ -25,9 +25,10 @@
         <span class="font-semibold text-dark-subtext">Sign Up</span> and lodge
         your complaint
       </p>
-      <p class="mt-4 text-light-subtext lg:w-6/12 sm:w-8/12">
-        Let’s get you set up so you can begin ordering media and advertising
-        services.
+      <p class="mt-4 text-light-subtext sm:w-8/12">
+        lorem ipsum dolor sit amet, consectet lorem ipsum dolor sit amet,
+        consectet lorem ipsum dolor sit amet, consectet lorem ipsum dolor sit
+        amet.
       </p>
 
       <hr class="border-dark-gray mt-4" />
@@ -38,7 +39,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.firstname"
+            v-model="firstname"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7 sm:mt-0">
@@ -46,7 +47,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.lastname"
+            v-model="lastname"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -54,7 +55,7 @@
           <input
             type="number"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.number"
+            v-model="number"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -62,7 +63,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.email"
+            v-model="email"
           />
         </div>
 
@@ -71,7 +72,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.location"
+            v-model="location"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -79,7 +80,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.car_model"
+            v-model="car_model"
           />
         </div>
         <div class="w-full mt-7">
@@ -87,7 +88,7 @@
           <textarea
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-44 mt-2 py-3 px-5"
-            v-model.trim="signupForm.complaint"
+            v-model="complaint"
           />
         </div>
       </form>
@@ -103,7 +104,7 @@
       <div class="flex sm:justify-end justify-center sm:mt-3 mt-7">
         <button
           class="px-8 py-2 text-white rounded-md bg-autocare-blue"
-          @click="showModal()"
+          @click="signup()"
         >
           Sign up
         </button>
@@ -117,29 +118,44 @@
 
 <script>
 import Modal from "./Modal.vue";
+import axios from "axios";
+
 export default {
   components: {
     Modal,
   },
   data() {
     return {
-      signupForm: {
-        firstname: "",
-        lastname: "",
-        number: "",
-        email: "",
-        password: "",
-        confirmpassword: "",
-        location: "",
-        car_model: "",
-        complaint: "",
-      },
+      firstname: "",
+      lastname: "",
+      number: "",
+      email: "",
+      location: "",
+      car_model: "",
+      complaint: "",
       isModalVisible: false,
     };
   },
   methods: {
-    showModal() {
+    signup() {
       this.isModalVisible = true;
+
+      axios
+        .post("https://autocare-sheets.herokuapp.com/submit-complaint/", {
+          firstname: this.firstname,
+          lastname: this.lastname,
+          email: this.email,
+          number: this.phone_number,
+          complaint: this.complaint,
+          location: this.location,
+          car_model: this.car_model,
+        })
+        .then(() => {
+          console.log("sent");
+        })
+        .catch((error) => {
+          console.log("error: " + error);
+        });
     },
     closeModal() {
       this.isModalVisible = false;

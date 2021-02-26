@@ -2,23 +2,30 @@
   <div>
     <div class="modal">
       <div
-        class="fixed bg-white top-1/4 right-1/2 -mr-32 flex flex-col rounded-md border-2 border-autocare-blue"
+        class="fixed bg-white top-1/4 right-1/2 -mr-60 flex flex-col rounded-2xl shadow-xl border-2 border-autocare-blue"
       >
-        <section class="relative py-12 px-7 w-64 text-autocare-blue inter">
+        <section
+          class="relative py-12 px-7 w-100 text-autocare-blue text-center inter"
+        >
           <slot name="body">
             <img
               src="../assets/img/tick-with-circle.svg"
               alt=""
-              class="w-4/12 mx-auto"
+              class="w-2/12 mx-auto"
             />
-            <p class="mt-6">
-              Thank you for getting in touch with us. <br />
-              An expert will reach you in 24 hours
+            <h2 class="mt-6 font-bold text-xl">
+              You've Registered your Complaint
+            </h2>
+            <p class="mt-4 text-gray-500 leading-tight px-4">
+              Thank you for reaching us, an expert would get back to you within
+              the next 48 hours.
             </p>
             <router-link to="/"
-              ><p class="mt-9 text-map-gray text-center">
+              ><button
+                class="mt-9 rounded-full text-white text-center w-full bg-autocare-blue py-2"
+              >
                 Go home
-              </p></router-link
+              </button></router-link
             >
           </slot>
         </section>

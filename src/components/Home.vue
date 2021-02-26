@@ -19,7 +19,7 @@
           <button
             class="mt-10 xl:mt-16 text-autocare-blue bg-autocare-orange px-4 py-2 rounded-md uppercase text-sm lg:text-base xl:text-lg font-semibold tracking-wide focus:outline-none font-segoe-bold"
           >
-            chat with an expert now
+            contact an expert now
           </button>
         </router-link>
       </div>
