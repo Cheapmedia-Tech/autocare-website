@@ -93,26 +93,10 @@
             >
           </div>
         </div>
-        <div v-if="flag">
-          <div class="relative flex justify-end">
-            <button
-              @click="profiletoggle"
-              class="px-4 py-1 h-10 w-10 bg-white font-segoe border-2 border-autocare-orange rounded-full leading-none focus:outline-none"
-            ></button>
-            <div
-              class="absolute flex flex-col bg-white divide-y px-3 right-0 py-2 mt-12 w-48 rounded-md"
-              :class="{ hidden: !profile, block: profile }"
-            >
-              <router-link class="py-1" to="/dashboard">Dashboard</router-link>
-              <a class="py-1" @click="logout()">Logout</a>
-            </div>
-          </div>
-        </div>
         <div
           class="flex justify-between items-center sm:w-4/12 xl:w-3/12 sm:justify-around lg:justify-between xl:justify-around"
-          v-else
         >
-          <router-link to="/login">
+          <router-link to="/login" class="hidden">
             <button
               class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border-white sm:text-white sm:border"
             >
@@ -151,14 +135,11 @@
 </template>
 
 <script>
-import firebase from "firebase";
 export default {
   data() {
     return {
       isopen: false,
       signup: false,
-      profile: false,
-      flag: false,
     };
   },
   methods: {
@@ -168,25 +149,9 @@ export default {
     signuptoggle() {
       this.signup = !this.signup;
     },
-    profiletoggle() {
-      this.profile = !this.profile;
-    },
     logout() {
       this.$store.dispatch("logout");
     },
-    isSignedIn() {
-      firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-          this.flag = true;
-        } else {
-          this.flag = false;
-        }
-      });
-    },
-  },
-  mounted() {
-    this.isSignedIn();
-    console.log(this.flag);
   },
   name: "Header",
 };

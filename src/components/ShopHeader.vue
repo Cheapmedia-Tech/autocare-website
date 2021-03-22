@@ -87,17 +87,18 @@
       >
       <div
         class="flex justify-between items-center sm:w-12/12 lg:w-4/12 xl:w-3/12 sm:justify-end lg:justify-around xl:justify-around"
-        v-if="showAuth"
       >
-        <button
-          class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border lg:border-white"
-        >
-          Login
-        </button>
+        <router-link to="/login" class="hidden">
+          <button
+            class="px-6 py-1 h-10 font-segoe border-2 border-autocare-blue rounded-md leading-none sm:text-xs xl:text-base sm:px-4 lg:px-8 sm:py-2 lg:py-2 sm:h-auto focus:outline-none hover:bg-hover-gray hover:border-transparent hover:text-autocare-blue sm:border lg:border-white"
+          >
+            Login
+          </button>
+        </router-link>
         <div class="relative">
           <button
             @click="signuptoggle"
-            class="px-4 py-1 h-10 font-segoe border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center ml-8 lg:ml-0"
+            class="px-4 py-1 h-10 font-segoe text-autocare-blue border-2 border-autocare-orange rounded-md bg-autocare-orange leading-none sm:text-xs xl:text-base sm:px-2 lg:px-4 sm:py-2 lg:py-2 sm:h-auto focus:outline-none flex items-center ml-8 lg:ml-0"
           >
             <p>Sign up |</p>
             <img src="../assets/img/down-arrow.svg" class="ml-2" alt="" />
@@ -106,10 +107,11 @@
             class="absolute flex flex-col bg-white text-autocare-blue border border-autocare-blue divide-y px-3 right-0 py-2 mt-2 w-48 rounded-md"
             :class="{ hidden: !signup, block: signup }"
           >
-            <a
+            <router-link
+              to="/signup"
               class="py-1"
               href="https://docs.google.com/forms/d/1crkiGGD4RVqs-fD4bAr5RDgbU49Dc6Lv9o3RTThY-nw/edit"
-              >Register as User</a
+              >Register as User</router-link
             >
             <a
               class="py-1"
@@ -142,8 +144,7 @@
 
 <script>
 import { EventBus } from "../../event-bus.js";
-import Modal from "./Modal.vue";
-import { mapState } from "vuex";
+import Modal from "./CartModal.vue";
 export default {
   components: {
     Modal,
@@ -174,12 +175,6 @@ export default {
     EventBus.$on("cartlength", (cartlength) => {
       this.length = cartlength;
     });
-  },
-  computed: {
-    ...mapState(["userProfile"]),
-    showAuth() {
-      return Object.keys(this.userProfile).length > 1;
-    },
   },
 };
 </script>

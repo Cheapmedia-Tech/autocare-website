@@ -18,6 +18,9 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "history",
+  scrollBehavior() {
+    document.getElementById("app").scrollIntoView();
+  },
   routes: [
     {
       path: "/",
@@ -29,8 +32,8 @@ const router = new VueRouter({
       name: "dashboard",
       component: Dashboard,
       meta: {
-        requiresAuth: true
-      }
+        requiresAuth: true,
+      },
     },
     {
       path: "/blog",
@@ -88,13 +91,13 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
+  const requiresAuth = to.matched.some((x) => x.meta.requiresAuth);
 
   if (requiresAuth && !auth.currentUser) {
-    next('/login')
+    next("/login");
   } else {
-    next()
+    next();
   }
-})
+});
 
 export default router;

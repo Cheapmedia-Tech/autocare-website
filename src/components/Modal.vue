@@ -1,77 +1,49 @@
 <template>
   <div>
-    <div
-      class="fixed bg-white bottom-auto lg:bottom-auto lg:top-16 max-w-390px min-w-250px right-7 flex flex-col rounded-md border-2 border-autocare-blue"
-    >
-      <header
-        class="flex p-4 justify-between items-center text-autocare-blue border-b font-semibold ibm-font"
+    <div class="modal">
+      <div
+        class="fixed bg-white top-1/4 right-1/2 -mr-60 flex flex-col rounded-2xl shadow-xl border-2 border-autocare-blue"
       >
-        <slot name="header"> Cart </slot>
-        <button type="button" @click="close">
-          <img src="../assets/img/close-blue.svg" alt="close" />
-        </button>
-      </header>
-      <section
-        class="relative p-6 text-autocare-blue inter"
-        v-if="content.length === 0"
-      >
-        <slot name="body"> Cart is Empty </slot>
-      </section>
-      <section
-        class="relative p-6 text-autocare-blue inter"
-        v-else
-        v-html="display"
-      >
-        <slot name="body">
-          {{ display }}
-        </slot>
-      </section>
-      <footer class="flex p-4 border-t justify-between inter">
-        <slot name="footer">
-          <button
-            type="button"
-            class="bg-autocare-blue py-1 px-3 text-sm text-white lg:text-base rounded-md"
-            @click="clear"
-          >
-            Clear
-          </button>
-          <button
-            type="button"
-            class="bg-autocare-blue py-1 px-3 text-sm text-white lg:text-base rounded-md"
-          >
-            <router-link to="/checkout"> Checkout </router-link>
-          </button>
-        </slot>
-      </footer>
+        <section
+          class="relative py-12 px-7 w-100 text-autocare-blue text-center inter"
+        >
+          <slot name="body">
+            <img
+              src="../assets/img/tick-with-circle.svg"
+              alt=""
+              class="w-2/12 mx-auto"
+            />
+            <h2 class="mt-6 font-bold text-xl">
+              You've Registered your Complaint
+            </h2>
+            <p class="mt-4 text-gray-500 leading-tight px-4">
+              Thank you for reaching us, an expert would get back to you within
+              the next 48 hours.
+            </p>
+            <router-link to="/"
+              ><button
+                class="mt-9 rounded-full text-white text-center w-full bg-autocare-blue py-2"
+              >
+                Go home
+              </button></router-link
+            >
+          </slot>
+        </section>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { EventBus } from "../../event-bus.js";
 export default {
   name: "modal",
   data() {
-    return {
-      content: "Cart is empty",
-      display: "Cart is empty",
-    };
+    return {};
   },
   methods: {
     close() {
       this.$emit("close");
     },
-    clear() {
-      this.display = "Cart is empty";
-      localStorage.clear();
-      window.location.reload();
-    },
-  },
-  mounted() {
-    EventBus.$on("cartcontent", (cart) => {
-      this.content = cart;
-      this.display = cart.join("<br/>");
-    });
   },
 };
 </script>
@@ -86,5 +58,17 @@ export default {
 
 .ibm-font {
   font-family: "IBM Plex Sans", sans-serif;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 </style>

@@ -25,9 +25,10 @@
         <span class="font-semibold text-dark-subtext">Sign Up</span> and lodge
         your complaint
       </p>
-      <p class="mt-4 text-light-subtext lg:w-6/12 sm:w-8/12">
-        Let’s get you set up so you can begin ordering media and advertising
-        services.
+      <p class="mt-4 text-light-subtext sm:w-8/12">
+        lorem ipsum dolor sit amet, consectet lorem ipsum dolor sit amet,
+        consectet lorem ipsum dolor sit amet, consectet lorem ipsum dolor sit
+        amet.
       </p>
 
       <hr class="border-dark-gray mt-4" />
@@ -38,7 +39,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.firstname"
+            v-model="firstname"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7 sm:mt-0">
@@ -46,7 +47,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.lastname"
+            v-model="lastname"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -54,7 +55,7 @@
           <input
             type="number"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.number"
+            v-model="number"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -62,31 +63,16 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.email"
+            v-model="email"
           />
         </div>
-        <div class="sm:w-5/12 w-full mt-7">
-          <p class="font-semibold">Password</p>
-          <input
-            type="password"
-            class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.password"
-          />
-        </div>
-        <div class="sm:w-5/12 w-full mt-7">
-          <p class="font-semibold">Confirm password</p>
-          <input
-            type="password"
-            class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.confirmpassword"
-          />
-        </div>
+
         <div class="sm:w-5/12 w-full mt-7">
           <p class="font-semibold">Location (State)</p>
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.location"
+            v-model="location"
           />
         </div>
         <div class="sm:w-5/12 w-full mt-7">
@@ -94,7 +80,7 @@
           <input
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model.trim="signupForm.car_model"
+            v-model="car_model"
           />
         </div>
         <div class="w-full mt-7">
@@ -102,7 +88,7 @@
           <textarea
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-44 mt-2 py-3 px-5"
-            v-model.trim="signupForm.complaint"
+            v-model="complaint"
           />
         </div>
       </form>
@@ -124,39 +110,94 @@
         </button>
       </div>
     </div>
+    <div class="">
+      <modal v-show="isModalVisible" @close="closeModal" />
+    </div>
   </div>
 </template>
 
 <script>
+import Modal from "./Modal.vue";
+import axios from "axios";
+
 export default {
+  components: {
+    Modal,
+  },
   data() {
     return {
-      signupForm: {
-        firstname: "",
-        lastname: "",
-        number: "",
-        email: "",
-        password: "",
-        confirmpassword: "",
-        location: "",
-        car_model: "",
-        complaint: "",
-      },
+      firstname: "",
+      lastname: "",
+      number: "",
+      email: "",
+      location: "",
+      car_model: "",
+      complaint: "",
+      isModalVisible: false,
     };
   },
   methods: {
     signup() {
-      this.$store.dispatch("signup", {
-        email: this.signupForm.email,
-        password: this.signupForm.password,
-        firstname: this.signupForm.firstname,
-        lastname: this.signupForm.lastname,
-        number: this.signupForm.number,
-        car_model: this.signupForm.car_model,
-        location: this.signupForm.location,
-        complaint: this.signupForm.complaint,
-      });
+      this.isModalVisible = true;
+
+      axios
+        .post("https://autocare-sheets.herokuapp.com/submit-complaint/", {
+          firstname: this.firstname,
+          lastname: this.lastname,
+          email: this.email,
+          number: this.phone_number,
+          complaint: this.complaint,
+          location: this.location,
+          car_model: this.car_model,
+        })
+        .then(() => {
+          console.log("sent");
+        })
+        .catch((error) => {
+          console.log("error: " + error);
+        });
+    },
+    closeModal() {
+      this.isModalVisible = false;
     },
   },
 };
 </script>
+
+<style>
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
