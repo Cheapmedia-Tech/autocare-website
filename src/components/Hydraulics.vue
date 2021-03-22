@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="px-2 sm:px-7 lg:px-8 py-10">
-      <p class="ibm-font text-lg">Hydraulics</p>
+      <p class="ibm-font text-lg">All Products</p>
       <p class="text-register-body text-sm inter"></p>
 
       <hr class="mt-2 border-register-border" />

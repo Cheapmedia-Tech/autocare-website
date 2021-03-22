@@ -2,8 +2,59 @@
   <div class="shadow-xl group">
     <div class="h-32 relative">
       <div
-        class="absolute bg-gray-400 opacity-50 group-hover:bg-gray-700 z-20 inset-0"
-      ></div>
+        class="absolute bg-gray-400 opacity-50 group-hover:bg-gray-700 inset-0"
+      >
+        <img
+          v-if="item.name.toLowerCase().includes('filter')"
+          class="h-full mx-auto"
+          src="../assets/img/filter.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('engine')"
+          class="h-full mx-auto"
+          src="../assets/img/engine-shop.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('brake')"
+          class="h-full mx-auto"
+          src="../assets/img/brake.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('battery')"
+          class="h-full mx-auto"
+          src="../assets/img/car-battery.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('gear')"
+          class="h-full mx-auto"
+          src="../assets/img/tool.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('shock')"
+          class="h-full mx-auto"
+          src="../assets/img/shock-absorber.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('tire')"
+          class="h-full mx-auto"
+          src="../assets/img/tire.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('fan')"
+          class="h-full mx-auto"
+          src="../assets/img/fan.svg"
+        />
+        <img
+          v-else-if="item.name.toLowerCase().includes('headlight')"
+          class="h-full mx-auto"
+          src="../assets/img/headlight.svg"
+        />
+        <img
+          v-else
+          class="h-full mx-auto"
+          src="../assets/img/mechanic.svg"
+        />
+      </div>
     </div>
 
     <div class="h-28 p-2">
