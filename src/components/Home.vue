@@ -15,13 +15,13 @@
           Or have any issues with your vehicle? We have an expert ready to
           resolve all your auto problems
         </p>
-        <router-link to="/signup">
+        <a href="https://wa.me/2348086067604">
           <button
             class="mt-10 xl:mt-16 text-autocare-blue bg-autocare-orange px-4 py-2 rounded-md uppercase text-sm lg:text-base xl:text-lg font-semibold tracking-wide focus:outline-none font-segoe-bold"
           >
             contact an expert now
           </button>
-        </router-link>
+        </a>
       </div>
       <div class="relative mt-16 sm:mt-10 xl:mt-12 sm:w-1/2">
         <img
