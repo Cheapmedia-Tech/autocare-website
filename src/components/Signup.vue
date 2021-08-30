@@ -4,14 +4,14 @@
       class="bg-autocare-blue px-6 py-8 sm:flex sm:justify-between sm:items-center lg:px-10"
     >
       <div class="flex justify-between items-center sm:w-3/12">
-        <a href="/">
+        <a href="https://myautocare.ng">
           <img
             src="../assets/img/logo.svg"
             alt="logo"
             class="lg:hidden block h-8 w-auto"
           />
         </a>
-        <a href="/">
+        <a href="https://myautocare.ng">
           <img
             src="../assets/img/logowithtext.svg"
             alt="logo with text"
@@ -22,13 +22,10 @@
     </nav>
     <div class="xl:p-32 sm:p-24 p-16 xl:w-9/12 lg:w-11/12 mx-auto">
       <p class="text-2xl">
-        <span class="font-semibold text-dark-subtext">Sign Up</span> and lodge
-        your complaint
+        <span class="font-semibold text-dark-subtext">Sign Up</span> as a Mechanic
       </p>
       <p class="mt-4 text-light-subtext sm:w-8/12">
-        lorem ipsum dolor sit amet, consectet lorem ipsum dolor sit amet,
-        consectet lorem ipsum dolor sit amet, consectet lorem ipsum dolor sit
-        amet.
+        Fill in the form below to register for the Mechanic partnership program.
       </p>
 
       <hr class="border-dark-gray mt-4" />
@@ -50,7 +47,7 @@
             v-model="lastname"
           />
         </div>
-        <div class="sm:w-5/12 w-full mt-7">
+        <div class="sm:w-5/12 w-full mt-8">
           <p class="font-semibold">Phone Number</p>
           <input
             type="number"
@@ -58,7 +55,7 @@
             v-model="number"
           />
         </div>
-        <div class="sm:w-5/12 w-full mt-7">
+        <div class="sm:w-5/12 w-full mt-8">
           <p class="font-semibold">Email</p>
           <input
             type="text"
@@ -67,7 +64,7 @@
           />
         </div>
 
-        <div class="sm:w-5/12 w-full mt-7">
+        <div class="sm:w-5/12 w-full mt-8">
           <p class="font-semibold">Location (State)</p>
           <input
             type="text"
@@ -75,16 +72,21 @@
             v-model="location"
           />
         </div>
-        <div class="sm:w-5/12 w-full mt-7">
-          <p class="font-semibold">Car Model</p>
-          <input
-            type="text"
+        <div class="sm:w-5/12 w-full mt-8">
+
+          <p class="font-semibold">Major Skill</p>
+          <select
+            type="check"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-10 mt-2 px-3"
-            v-model="car_model"
-          />
+            v-model="car_model">
+            <option>Transmission & Hydraulics</option>
+            <option>Engines</option>
+            <option>Body work</option>
+            <option>Body work</option>
+          </select>
         </div>
-        <div class="w-full mt-7">
-          <p class="font-semibold">Details of your issue</p>
+        <div class="w-full mt-8">
+          <p class="font-semibold">Briefly describe your experience (include years, brands you've worked on, etc.)</p>
           <textarea
             type="text"
             class="border border-dark-gray rounded-md focus:outline-none w-full h-44 mt-2 py-3 px-5"
@@ -96,17 +98,12 @@
         <input type="checkbox" class="rounded-md border border-dark-gray" />
         <p class="ml-4">I agree processing my personal data</p>
       </div>
-      <div class="flex items-center mt-4">
-        <router-link to="/login" class="underline text-dark-gray"
-          >Already have an account? Login</router-link
-        >
-      </div>
       <div class="flex sm:justify-end justify-center sm:mt-3 mt-7">
         <button
           class="px-8 py-2 text-white rounded-md bg-autocare-blue"
           @click="signup()"
         >
-          Sign up
+          Register
         </button>
       </div>
     </div>

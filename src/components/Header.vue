@@ -11,7 +11,7 @@
             class="lg:hidden block h-8 w-auto"
           />
         </a>
-        <a href="/">
+        <a href="https://www.autocare.ng">
           <img
             src="../assets/img/logowithtext.svg"
             alt="logo with text"

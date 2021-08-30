@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/components/Home.vue";
+// import Home from "@/components/Home.vue";
 import About from "@/components/About.vue";
 import Learn from "@/components/Learn.vue";
 import Dashboard from "@/components/Dashboard.vue";
@@ -25,7 +25,7 @@ const router = new VueRouter({
     {
       path: "/",
       name: "home-page",
-      component: Home,
+      component: Signup,
     },
     {
       path: "/dashboard",
